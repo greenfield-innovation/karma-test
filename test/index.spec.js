@@ -7,53 +7,53 @@ import { alwaysTrue, isEven, countLetters } from '../src'
 
 describe('Testing Dev Ops Setup', () => {
   it('should expose the Chai expect method', () => {
-    expect(1).to.not.equal(2)
-  })
+    expect(1).to.not.equal(2);
+  });
 
   it('should work with ES6 import export', () => {
-    expect(alwaysTrue()).to.be.true
+    expect(alwaysTrue()).to.be.true;
   })
-})
+});
 
 // Sample Test
 describe('Testing the isEven function', () => {
   it('should Exist', () => {
-    expect(isEven(0)).to.be.true
-  })
+    expect(isEven(0)).to.be.true;
+  });
 
   it('checks that a number is even', () => {
-    const evenNumber = Math.round(Math.random()) * 2
-    expect(isEven(evenNumber)).to.be.true
-  })
+    const evenNumber = Math.round(Math.random()) * 2;
+    expect(isEven(evenNumber)).to.be.true;
+  });
 
   it('checks that a number is odd', () => {
-    const oddNumber = Math.round(Math.random()) * 2 + 1
-    expect(isEven(oddNumber)).to.be.false
-  })
+    const oddNumber = Math.round(Math.random()) * 2 + 1;
+    expect(isEven(oddNumber)).to.be.false;
+  });
 
   it('fails when a string is passed', () => {
     try {
-      isEven('abc')
-      expect(isEven).to.throw(Error)
-      assert.fail()
+      isEven('abc');
+      expect(isEven).to.throw(Error);
+      assert.fail();
     } catch (error) {
-      expect(error.message === 'Must be a number')
+      expect(error.message === 'Must be a number');
     }
   })
-})
+});
 
 describe('Testing the countLetters function', () => {
   it('returns a number when a string is passed', () => {
-    expect(countLetters('abc')).to.equal(3)
-  })
+    expect(countLetters('abc')).to.equal(3);
+  });
 
   it('fails when a non-string is passed', () => {
     try {
-      countLetters(null)
-      expect(isEven).to.throw(Error)
-      assert.fail()
+      countLetters(null);
+      expect(isEven).to.throw(Error);
+      assert.fail();
     } catch (error) {
       expect(error.message === 'Must be a string')
     }
   })
-})
+});
