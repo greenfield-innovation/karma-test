@@ -36,7 +36,7 @@ module.exports = function (config) {
         [
           'babelify',
           {
-            presets: 'es2015'
+            presets: ['es2015', 'stage-3']
           }
         ], [
           'browserify-istanbul',
@@ -88,7 +88,7 @@ module.exports = function (config) {
     singleRun: false,
 
     // Concurrency level
-    // how many browser should be started simultaneous
+    // how many browsers should be started simultaneously
     concurrency: Infinity
   })
-}
+};
